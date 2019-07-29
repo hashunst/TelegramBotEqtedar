@@ -48,13 +48,13 @@ class SalamCommand extends Command
             'one_time_keyboard' => true
         ]);
 
-        $this->replyWithMessage([
+        $response = Telegram::sendMessage([
             'chat_id' => 'CHAT_ID',
             'text' => 'Hello World',
             'reply_markup' => $reply_markup
         ]);
 
-//        $messageId = $response->getMessageId();
+        $messageId = $response->getMessageId();
 
         // This will update the chat status to typing...
         $this->replyWithChatAction(['action' => Actions::TYPING]);
