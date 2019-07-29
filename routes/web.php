@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::any('/test', function (){
-    Telegram::sendPhoto(['chat_id' => '146541735', 'photo' => resource_path('download.png')]);
+//    Telegram::sendPhoto(['chat_id' => '146541735', 'photo' => resource_path('download.png')]);
 //    file_put_contents(public_path('has'), 'has');
 //        $telegram = new Api();
 //        $telegram
