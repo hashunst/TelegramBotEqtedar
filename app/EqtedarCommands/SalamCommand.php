@@ -33,7 +33,7 @@ class SalamCommand extends Command
             'caption' => '@eqtedarmeli'
         ]);
 
-        $this->replyWithMessage(['text' => "args: "]);
+        $this->replyWithMessage(['text' => "args: " . $arguments]);
 
         // This will update the chat status to typing...
         $this->replyWithChatAction(['action' => Actions::TYPING]);
