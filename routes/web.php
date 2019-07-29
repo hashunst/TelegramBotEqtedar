@@ -12,11 +12,15 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use Telegram\Bot\Api;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/test', function (){
+
+    $telegram = new Api();
+    return $telegram->getMe();
     return 'this is a test';
 });
