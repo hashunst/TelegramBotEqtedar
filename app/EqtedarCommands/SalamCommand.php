@@ -4,6 +4,7 @@ namespace App\EqtedarCommands;
 
 use Telegram\Bot\Actions;
 use Telegram\Bot\Commands\Command;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 class SalamCommand extends Command
 {
