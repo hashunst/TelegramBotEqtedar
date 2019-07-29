@@ -13,6 +13,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Telegram\Bot\Api;
+use Telegram\Bot\Commands\HelpCommand;
 use Telegram\Bot\Laravel\Facades\Telegram;
 
 Route::get('/', function () {
@@ -23,6 +24,10 @@ Route::any('/test', function (){
 //    Telegram::sendPhoto(['chat_id' => '146541735', 'photo' => resource_path('download.png')]);
 //    file_put_contents(public_path('has'), 'has');
         $telegram = new Api();// webhook.php
+    Telegram::addCommands([
+        Telegram\Bot\Commands\HelpCommand::class,
+        \App\EqtedarCommands\StartCommand::class,
+    ]);
         $text = $telegram->commandsHandler(true)->getMessage()->getText();
 
         if(!empty($text)){
