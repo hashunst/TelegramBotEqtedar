@@ -28,5 +28,6 @@ Route::any('/test', function (){
 ////            ->setAsyncRequest(true)
 //            ->sendPhoto(['chat_id' => '146541735', 'photo' => resource_path('download.png')]);
 //        return $telegram->getMe();
+        return $update;
         return 'this is a test';
 });
