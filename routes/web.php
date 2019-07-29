@@ -11,6 +11,7 @@
 |
 */
 
+use App\EqtedarCommands\StartCommand;
 use Illuminate\Support\Facades\Route;
 use Telegram\Bot\Api;
 use Telegram\Bot\Commands\HelpCommand;
@@ -25,8 +26,8 @@ Route::any('/test', function (){
 //    file_put_contents(public_path('has'), 'has');
         $telegram = new Api();// webhook.php
     Telegram::addCommands([
-        Telegram\Bot\Commands\HelpCommand::class,
-        \App\EqtedarCommands\StartCommand::class,
+        HelpCommand::class,
+        StartCommand::class,
     ]);
         $text = $telegram->commandsHandler(true)->getMessage()->getText();
 
