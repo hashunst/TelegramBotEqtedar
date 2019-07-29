@@ -28,14 +28,16 @@ class SalamCommand extends Command
         // handled when you replace `send<Method>` with `replyWith` and use the same parameters - except chat_id does NOT need to be included in the array.
         $this->replyWithMessage(['text' => 'SaLaM bar to']);
 
+        $this->replyWithMessage(['text' => "args: "]);
+
         $this->replyWithPhoto([
             'photo' => resource_path('download.png'),
             'caption' => '@eqtedarmeli'
         ]);
 
+
         // This will update the chat status to typing...
         $this->replyWithChatAction(['action' => Actions::TYPING]);
 
-        $this->replyWithMessage(['text' => "args: "]);
     }
 }
