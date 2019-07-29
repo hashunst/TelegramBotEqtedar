@@ -29,7 +29,7 @@ class SalamCommand extends Command
         $this->replyWithMessage(['text' => 'SaLaM bar to']);
 
         $this->replyWithPhoto([
-            'photo' => public_path('download.png'),
+            'photo' => resource_path('download.png'),
             'caption' => '@eqtedarmeli'
         ]);
 
