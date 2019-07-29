@@ -29,7 +29,7 @@ Route::any('/test', function (){
         HelpCommand::class,
         StartCommand::class,
     ]);
-        $text = $telegram->commandsHandler(true)->getMessage()->getText();
+        $text = Telegram::commandsHandler(true)->getMessage()->getText();
 
         if(!empty($text)){
             $telegram->sendMessage([
