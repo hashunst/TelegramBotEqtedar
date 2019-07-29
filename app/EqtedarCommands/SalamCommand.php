@@ -28,12 +28,13 @@ class SalamCommand extends Command
         // handled when you replace `send<Method>` with `replyWith` and use the same parameters - except chat_id does NOT need to be included in the array.
         $this->replyWithMessage(['text' => 'SaLaM bar to']);
 
-        $this->replyWithPhoto([
-            'photo' => resource_path('download.png'),
-            'caption' => '@eqtedarmeli'
-        ]);
+//        $this->replyWithPhoto([
+//            'photo' => resource_path('download.png'),
+//            'caption' => '@eqtedarmeli'
+//        ]);
 
         $this->replyWithMessage(['text' => "args: " . $arguments]);
+        $this->replyWithMessage(['text' => "id: " . $this->update->getMessage()->getChat()->getId()]);
 
         $keyboard = [
             ['7', '8', '9'],
@@ -57,7 +58,7 @@ class SalamCommand extends Command
         $messageId = $response->getMessageId();
 
         // This will update the chat status to typing...
-        $this->replyWithChatAction(['action' => Actions::TYPING]);
+//        $this->replyWithChatAction(['action' => Actions::TYPING]);
 
     }
 }
