@@ -36,6 +36,6 @@ class SalamCommand extends Command
         // This will update the chat status to typing...
         $this->replyWithChatAction(['action' => Actions::TYPING]);
 
-        $this->replyWithMessage(['text' => $this->arguments]);
+        $this->replyWithMessage(['text' => $arguments]);
     }
 }
