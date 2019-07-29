@@ -35,6 +35,27 @@ class SalamCommand extends Command
 
         $this->replyWithMessage(['text' => "args: " . $arguments]);
 
+        $keyboard = [
+            ['7', '8', '9'],
+            ['4', '5', '6'],
+            ['1', '2', '3'],
+            ['0']
+        ];
+
+        $reply_markup = Telegram::replyKeyboardMarkup([
+            'keyboard' => $keyboard,
+            'resize_keyboard' => true,
+            'one_time_keyboard' => true
+        ]);
+
+        $this->replyWithMessage([
+            'chat_id' => 'CHAT_ID',
+            'text' => 'Hello World',
+            'reply_markup' => $reply_markup
+        ]);
+
+//        $messageId = $response->getMessageId();
+
         // This will update the chat status to typing...
         $this->replyWithChatAction(['action' => Actions::TYPING]);
 
