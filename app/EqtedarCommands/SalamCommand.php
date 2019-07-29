@@ -27,15 +27,15 @@ class SalamCommand extends Command
         // the user/chat id who triggered this command.
         // `replyWith<Message|Photo|Audio|Video|Voice|Document|Sticker|Location|ChatAction>()` all the available methods are dynamically
         // handled when you replace `send<Method>` with `replyWith` and use the same parameters - except chat_id does NOT need to be included in the array.
-        $this->replyWithMessage(['text' => 'SaLaM bar to']);
+//        $this->replyWithMessage(['text' => 'SaLaM bar to']);
 
 //        $this->replyWithPhoto([
 //            'photo' => resource_path('download.png'),
 //            'caption' => '@eqtedarmeli'
 //        ]);
 
-        $this->replyWithMessage(['text' => "args: " . $arguments]);
-        $this->replyWithMessage(['text' => "id: " . $this->update->getMessage()->getChat()->getId()]);
+//        $this->replyWithMessage(['text' => "args: " . $arguments]);
+//        $this->replyWithMessage(['text' => "id: " . $this->update->getMessage()->getChat()->getId()]);
 
         $keyboard = [
             ['7', '8', '9'],
@@ -56,7 +56,7 @@ class SalamCommand extends Command
             'reply_markup' => $reply_markup
         ]);
 
-        $messageId = $response->getMessageId();
+//        $messageId = $response->getMessageId();
 
         // This will update the chat status to typing...
 //        $this->replyWithChatAction(['action' => Actions::TYPING]);

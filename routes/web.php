@@ -27,12 +27,12 @@ Route::any('/test', function (){
 
         $text = Telegram::commandsHandler(true)->getMessage()->getText();
 
-        if(!empty($text)){
-            Telegram::sendMessage([
-                'text' => $text,
-                'chat_id' => '146541735'
-            ]);
-        }
+//        if(!empty($text)){
+//            Telegram::sendMessage([
+//                'text' => $text,
+//                'chat_id' => '146541735'
+//            ]);
+//        }
 //        $telegram
 ////            ->setAsyncRequest(true)
 //            ->sendPhoto(['chat_id' => '146541735', 'photo' => resource_path('download.png')]);
