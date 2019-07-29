@@ -58,5 +58,6 @@ return [
     'commands' => [
         Telegram\Bot\Commands\HelpCommand::class,
         \App\EqtedarCommands\StartCommand::class,
+        \App\EqtedarCommands\SalamCommand::class,
     ],
 ];

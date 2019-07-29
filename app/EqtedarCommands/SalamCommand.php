@@ -5,7 +5,7 @@ namespace App\EqtedarCommands;
 use Telegram\Bot\Actions;
 use Telegram\Bot\Commands\Command;
 
-class StartCommand extends Command
+class SalamCommand extends Command
 {
     /**
      * @var string Command Name
