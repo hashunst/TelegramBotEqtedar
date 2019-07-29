@@ -34,14 +34,14 @@ class SalamCommand extends Command
 //            'caption' => '@eqtedarmeli'
 //        ]);
 
-//        $this->replyWithMessage(['text' => "args: " . $arguments]);
+        $this->replyWithMessage(['text' => "args: " . $arguments]);
 //        $this->replyWithMessage(['text' => "id: " . $this->update->getMessage()->getChat()->getId()]);
 
         $keyboard = [
             ['7', '8', '9'],
             ['4', '5', '6'],
             ['1', '2', '3'],
-            ['0']
+            ['/salam mess 2']
         ];
 
         $reply_markup = Telegram::replyKeyboardMarkup([
