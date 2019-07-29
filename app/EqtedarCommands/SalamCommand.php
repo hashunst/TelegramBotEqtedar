@@ -38,7 +38,7 @@ class SalamCommand extends Command
 //        $this->replyWithMessage(['text' => "id: " . $this->update->getMessage()->getChat()->getId()]);
 
         $keyboard = [
-            ['7', '8', '9'],
+            ['7' => 'hi', '8', '9'],
             ['4', '5', '6'],
             ['1', '2', '3'],
             ['/salam mess 2']
