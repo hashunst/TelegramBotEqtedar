@@ -53,7 +53,7 @@ class SalamCommand extends Command
         $response = Telegram::sendMessage([
             'chat_id' => $this->update->getMessage()->getChat()->getId(),
             'text' => 'Hello World',
-//            'reply_markup' => $reply_markup
+            'reply_markup' => $reply_markup
         ]);
 
         $messageId = $response->getMessageId();
