@@ -24,10 +24,10 @@ Route::any('/test', function (){
 //    file_put_contents(public_path('has'), 'has');
         $telegram = new Api();// webhook.php
         $update = $telegram->commandsHandler(true);
-        $telegram->sendMessage([
-            'text' => $update->toJson(),
-            'chat_id' => '146541735'
-        ]);
+//        $telegram->sendMessage([
+//            'text' => $update->toJson(),
+//            'chat_id' => '146541735'
+//        ]);
 //        $telegram
 ////            ->setAsyncRequest(true)
 //            ->sendPhoto(['chat_id' => '146541735', 'photo' => resource_path('download.png')]);
